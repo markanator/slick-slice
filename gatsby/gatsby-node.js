@@ -144,7 +144,7 @@ async function turnSlicemastersIntoPages({ graphql, actions }) {
 
 export async function sourceNodes(params) {
   // fetch a list of bears and source them to gatsby
-  await Promise.all([fetchBeersAndTurnIntoNodes(params)]);
+  // await Promise.all([fetchBeersAndTurnIntoNodes(params)]);
 }
 export async function createPages(params) {
   // create pages dynamically
