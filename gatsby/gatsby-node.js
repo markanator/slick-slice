@@ -142,10 +142,10 @@ async function turnSlicemastersIntoPages({ graphql, actions }) {
   // 5 modify query
 }
 
-export async function sourceNodes(params) {
-  // fetch a list of bears and source them to gatsby
-  // await Promise.all([fetchBeersAndTurnIntoNodes(params)]);
-}
+// export async function sourceNodes(params) {
+//   // fetch a list of bears and source them to gatsby
+//   // await Promise.all([fetchBeersAndTurnIntoNodes(params)]);
+// }
 export async function createPages(params) {
   // create pages dynamically
   // concurrent promise waiting before moving along
