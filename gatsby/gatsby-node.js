@@ -61,36 +61,36 @@ async function turnToppingsIntoPages({ graphql, actions }) {
 }
 
 // 3rd party api sourcing
-async function fetchBeersAndTurnIntoNodes({
-  actions,
-  createNodeId,
-  createContentDigest,
-}) {
-  // 1 fetch list of beers
-  const res = await fetch('https://sampleapis.com/beers/api/ale');
-  const beers = await res.json();
-  // 2 loop over each one
-  for (const beer of beers) {
-    // create a node for each beer
-    // const nodeContent = JSON.stringify(beer);
-    const nodeMeta = {
-      id: createNodeId(`beer-${beer.name}`),
-      parent: null,
-      children: [],
-      internal: {
-        type: 'Beer',
-        mediaType: 'application/json',
-        contentDigest: createContentDigest(beer),
-      },
-    };
-    // create a node for that beer
-    actions.createNode({
-      ...beer,
-      ...nodeMeta,
-    });
-  }
-  // console.log('🍺 Turn beers into nodes');
-}
+// async function fetchBeersAndTurnIntoNodes({
+//   actions,
+//   createNodeId,
+//   createContentDigest,
+// }) {
+//   // 1 fetch list of beers
+//   const res = await fetch('https://sampleapis.com/beers/api/ale');
+//   const beers = await res.json();
+//   // 2 loop over each one
+//   for (const beer of beers) {
+//     // create a node for each beer
+//     // const nodeContent = JSON.stringify(beer);
+//     const nodeMeta = {
+//       id: createNodeId(`beer-${beer.name}`),
+//       parent: null,
+//       children: [],
+//       internal: {
+//         type: 'Beer',
+//         mediaType: 'application/json',
+//         contentDigest: createContentDigest(beer),
+//       },
+//     };
+//     // create a node for that beer
+//     actions.createNode({
+//       ...beer,
+//       ...nodeMeta,
+//     });
+//   }
+//   // console.log('🍺 Turn beers into nodes');
+// }
 
 // make slicemasters into pages
 async function turnSlicemastersIntoPages({ graphql, actions }) {
