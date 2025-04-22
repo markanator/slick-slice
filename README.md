@@ -1,3 +1,3 @@
-Mikes Pizza Waukegan is a popular Pizza Joint in Illinois. Check out all the unique pizzas, slice-masters and site functionality.
+# Slick Slice
 
-## [Deployed Site](https://mikes-pizza.markambrocio.com/)
+A pizza ordering app for a local popular pizza joint in Illinois. Check out all the unique pizzas, slice-masters and site functionality.
